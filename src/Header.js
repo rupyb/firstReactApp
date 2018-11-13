@@ -6,7 +6,7 @@ import { Link, withRouter } from 'react-router-dom';
 class Header extends Component {
     getOptions = ()=> {
         return (Data.map((item, index) => (
-            <option key={index} value={item.id}>{item.name}</option>
+            <option key={item.id} value={item.id}>{item.name}</option>
         )))
     }
 
@@ -18,7 +18,6 @@ class Header extends Component {
                   onClick={() => { 
                     const theSelect = document.querySelector('#theSelect');
                     const selected = theSelect.options[theSelect.selectedIndex].value;
-                    console.log('selected',selected);
                     if(selected > 0 )  return selected && history.push(`/recipe/${selected}`) }}>
                    
                      
